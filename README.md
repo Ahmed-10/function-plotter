@@ -1,1 +1,1 @@
-# function-plotter
+# Terminal - Calculator
