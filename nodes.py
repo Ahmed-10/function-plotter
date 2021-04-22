@@ -9,6 +9,14 @@ class NumberNode:
 
 
 @dataclass
+class VariableNode:
+    value : str = 'x'
+
+    def __repr__(self):
+        return f"{self.value}"
+
+
+@dataclass
 class AddNode:
     left_node: any
     right_node: any

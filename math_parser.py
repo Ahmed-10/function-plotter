@@ -70,6 +70,15 @@ class Parser:
             self.advance()
             return result
 
+        elif token.type == TokenType.VAR:
+            self.advance()
+            if self.current_token != None:
+                if self.current_token.type == TokenType.POWER:
+                    self.advance()
+                    return PowerNode(token.value, self.factor())
+
+            return VariableNode(token.value) 
+
         elif token.type == TokenType.NUM:
             self.advance()
 
