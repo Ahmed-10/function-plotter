@@ -2,7 +2,7 @@ from tokens import Token, TokenType
 
 WHITE_SPACE = ' /n/t'
 DIGITS = '1234567890'
-VALID_INPUT = '0123456789 /n/t'
+VALID_INPUT = 'x0123456789 /n/t'
 
 class Lexer:
     def __init__(self, text):
@@ -22,6 +22,9 @@ class Lexer:
                 self.advance()
             elif self.current_char == '.' or self.current_char in DIGITS:
                 yield self.generate_number()
+            elif self.current_char == 'x':
+                self.advance()
+                yield Token(TokenType.VAR, 'x')
             elif self.current_char == '+':
                 self.advance()
                 yield Token(TokenType.PLUS)
