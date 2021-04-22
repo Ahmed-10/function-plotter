@@ -9,5 +9,8 @@ while True:
        # print(list(tokens))
        parser = Parser(tokens)
        tree = parser.parse()
-       print(tree)
-       
+       # print(tree)
+       if not tree: continue
+       interpreter = Interpreter()
+       value = interpreter.visit(tree)
+       print(value)
