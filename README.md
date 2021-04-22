@@ -1,1 +1,1 @@
-# function-plotter
+# terminal-function-plotter
