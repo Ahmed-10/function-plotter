@@ -23,7 +23,8 @@ class Parser:
         result = self.expression()
 
         if self.current_token != None:
-            if self.current_token == TokenType.POWER:
+            print(self.current_token)
+            if self.current_token.type == TokenType.POWER:
                 raise Exception('this case is under development, please redistribute the power over the expression')
             self.raise_sytax_error()
 
