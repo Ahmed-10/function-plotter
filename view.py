@@ -127,8 +127,10 @@ class WinView(QWidget):
         output = self.__validate_input()
         if output == 'valid':
             try:
-                if self.plot:
+                try:
                     self.plot.deleteLater()
+                except Exception:
+                    pass
                 self.plot = Plot(self, self.func_input.text(), self.start, self.stop, self.step)
                 self.plot.show()
                 self.plot.move(80, 150)
