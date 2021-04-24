@@ -47,7 +47,7 @@ class Lexer:
                 self.advance()
                 yield Token(TokenType.RIGHT_PARENTHESES)
             elif self.current_char not in VALID_INPUT:
-                raise Exception(f"Invalid Input character: {self.current_char}")
+                raise Exception(f"Invalid Input character")
             else:
                 self.advance()
     
