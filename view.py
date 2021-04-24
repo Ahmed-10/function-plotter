@@ -21,6 +21,7 @@ class WinView(QWidget):
         # main widget config
         self.setFixedSize(800, 600)
         self.setStyleSheet(app_background)
+        self.setWindowTitle('Function Plotter')
 
         fonts = QFontDatabase()
         for path in fonts_paths:
