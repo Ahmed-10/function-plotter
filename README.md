@@ -21,3 +21,6 @@ the application is not deployed yet to test the development version
 - run the script
     - for linux ` python3 main.py`
     - for windows `py main.py`
+
+## for testing
+- run the command `pytest test_app.py`
